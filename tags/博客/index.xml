@@ -20,14 +20,10 @@
 02 准备GitHub Page仓库 相比动态博客需要单独租用VPS或者服务器来说，静态博客在经济上更让人省心。由于不需要后台，我们可以直接将博客托管在GitHub Page、Dropbox等存储服务提供商上。这里我们用GitHub进行演示：
   新建一个名为[你的GitHub用户名].github.io的仓库
   进入仓库的setting
-  将下方的Source更改为/docs
-  至此你的GitHub Pages也配置好了。
-03 建站   输入hugo new site [你的站点名字]创建一个新的站点。
-  进入你刚刚创建的站点cd [你的站点名字]
-  在https://themes.gohugo.io/中找到你喜欢的主题并clone下来（如果此处不想使用git的话，也可以通过GitHub的Download to Desktop下载压缩包）
-  将clone下来的主题复制到theme目录（解压该 .zip 文件到你的博客主题 theme 目录）
-  重命名 hugo-[主题名]-master 为 [主题名]
-  将theme = &amp;quot;[主题名]&amp;quot;添加至根目录下的config.toml，再顺手配置一下站点的相关信息。配置完成后看起来应该是这样的（由于本人不习惯toml的语法，因此改为了yml，Hugo支持使用toml、yml以及json作为配置文件）：</description>
+   仓库Setting           将下方的Source更改为/docs
+   调整Source          此处也可以不调整至/docs，如果调整的话后续部署时需要将输出目录从/public改为/docs，如果不调整的话后续仅需要上传/public即可。
+   至此你的GitHub Pages也配置好了。
+03 建站   输入hugo new site [你的站点名字]创建一个新的站点。</description>
     </item>
     
   </channel>
