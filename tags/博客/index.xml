@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客 on Retr0ve&#39;s Veil Cave</title>
+    <link>http://Retr0ve.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on Retr0ve&#39;s Veil Cave</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Feb 2021 20:03:14 +0800</lastBuildDate><atom:link href="http://Retr0ve.github.io/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World!</title>
+      <link>http://Retr0ve.github.io/posts/new-to-hugo/</link>
+      <pubDate>Sun, 28 Feb 2021 20:03:14 +0800</pubDate>
+      
+      <guid>http://Retr0ve.github.io/posts/new-to-hugo/</guid>
+      <description>从Wordpress到Gridea再到最后的Hugo，这个个人博客总算是有了它最终的归宿。作为一名程序员，新博客的第一篇就简单的总结以下Hugo的搭建流程，以及静态博客生成器相较于动态博客的优点。
+搭建一个静态博客 静态博客的搭建由于不需要数据库等服务端的配置，相较于动态博客来说简单不少，仅仅需要将生成器的环境在本地搭建好，再准备好博客的内容就万事大吉了。下面我将用Hugo + GitHub Pages进行举例。
+01 开始！ 万事开头难，然而开头也不难，第一步需要下载Hugo最新的release。
+ 前往https://github.com/gohugoio/hugo/releases下载最新的Hugo Release。对于MacOS、Linux来说可以直接使用homebrew等工具直接安装，安装过程和windows略有不同，具体请参考官方文档https://gohugo.io/getting-started/quick-start/。 解压后打开命令行终端，进入安装目录。 输入hugo.exe version查看是否能正常启动。（此处可以将Hugo添加到环境变量，便于后续指令的输入。为了书写上简化，后续用hugo代替hugo可执行文件的路径。）  此时如果能够正常显示版本，说明你的Hugo在本地已经安装好了。
+02 准备GitHub Page仓库 相比动态博客需要单独租用VPS或者服务器来说，静态博客在经济上更让人省心。由于不需要后台，我们可以直接将博客托管在GitHub Page、Dropbox等存储服务提供商上。这里我们用GitHub进行演示：
+  新建一个名为[你的GitHub用户名].github.io的仓库
+  进入仓库的setting
+  将下方的Source更改为/docs
+  至此你的GitHub Pages也配置好了。
+03 建站   输入hugo new site [你的站点名字]创建一个新的站点。
+  进入你刚刚创建的站点cd [你的站点名字]
+  在https://themes.gohugo.io/中找到你喜欢的主题并clone下来（如果此处不想使用git的话，也可以通过GitHub的Download to Desktop下载压缩包）
+  将clone下来的主题复制到theme目录（解压该 .zip 文件到你的博客主题 theme 目录）
+  重命名 hugo-[主题名]-master 为 [主题名]
+  将theme = &amp;quot;[主题名]&amp;quot;添加至根目录下的config.toml，再顺手配置一下站点的相关信息。配置完成后看起来应该是这样的（由于本人不习惯toml的语法，因此改为了yml，Hugo支持使用toml、yml以及json作为配置文件）：</description>
+    </item>
+    
+  </channel>
+</rss>
