@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design Pattern on Retr0ve&#39;s Veil Cave</title>
+    <link>http://Retr0ve.github.io/tags/design-pattern/</link>
+    <description>Recent content in Design Pattern on Retr0ve&#39;s Veil Cave</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Mar 2021 12:56:40 +0800</lastBuildDate><atom:link href="http://Retr0ve.github.io/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Factory Pattern</title>
+      <link>http://Retr0ve.github.io/posts/simple-factory-pattern/</link>
+      <pubDate>Mon, 29 Mar 2021 12:56:40 +0800</pubDate>
+      
+      <guid>http://Retr0ve.github.io/posts/simple-factory-pattern/</guid>
+      <description>设计模式 - 简单工厂模式 综述 Overall 简单来说，简单工厂模式是由一个工厂类来创建其他类的实例。根据传入工厂类参数的不同，工厂类可以生成不同类的对象（通常这些类都继承自同样的父类）。
+ 值得注意的是，简单工厂模式并不是一个成熟且规范的设计模式，因为他违背了软件设计的开闭原则（即每次增加新的产品都需要修改工厂类的逻辑判断）。
+ 实例 Example 用户去超市购物，可以选择多种支付方式，包括现金、信用卡、微信、支付宝。请按照简单工厂模式的思想设计一个程序，让超市收银方类(Client)知道用户是使用的什么支付方式，支付了多少钱。
+请画出对应的类图，并编写代码。
+类图 Class Diagram 具体代码 Code   工厂类
+public class PaymentFactory { public static Payment selectPayment(String paymentType) throws Exception { if(paymentType.equalsIgnoreCase(&amp;#34;wechat&amp;#34;)){ return new WechatPayment(); } else if (paymentType.equalsIgnoreCase(&amp;#34;alipay&amp;#34;)){ return new AlipayPayment(); } else if (paymentType.equalsIgnoreCase(&amp;#34;cash&amp;#34;)){ return new CashPayment(); } else if (paymentType.equalsIgnoreCase(&amp;#34;creditcard&amp;#34;)){ return new CreditCardPayment(); } else{ throw new Exception(&amp;#34;暂不支持该支付方式&amp;#34;); } } }   抽象支付类
+public interface Payment { public void pay(int amount); }   微信支付类</description>
+    </item>
+    
+  </channel>
+</rss>

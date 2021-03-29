@@ -6,22 +6,31 @@
     <description>Recent content in Tags on Retr0ve&#39;s Veil Cave</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Feb 2021 20:03:14 +0800</lastBuildDate><atom:link href="http://Retr0ve.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Mar 2021 12:56:40 +0800</lastBuildDate><atom:link href="http://Retr0ve.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>博客</title>
-      <link>http://Retr0ve.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Sun, 28 Feb 2021 20:03:14 +0800</pubDate>
+      <title>Design Pattern</title>
+      <link>http://Retr0ve.github.io/tags/design-pattern/</link>
+      <pubDate>Mon, 29 Mar 2021 12:56:40 +0800</pubDate>
       
-      <guid>http://Retr0ve.github.io/tags/%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>http://Retr0ve.github.io/tags/design-pattern/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>数据挖掘</title>
-      <link>http://Retr0ve.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/</link>
+      <title>Blog</title>
+      <link>http://Retr0ve.github.io/tags/blog/</link>
       <pubDate>Sun, 28 Feb 2021 20:03:14 +0800</pubDate>
       
-      <guid>http://Retr0ve.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/</guid>
+      <guid>http://Retr0ve.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>http://Retr0ve.github.io/tags/git/</link>
+      <pubDate>Sun, 28 Feb 2021 20:03:14 +0800</pubDate>
+      
+      <guid>http://Retr0ve.github.io/tags/git/</guid>
       <description></description>
     </item>
     

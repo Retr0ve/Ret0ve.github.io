@@ -6,7 +6,46 @@
     <description>Recent content in Posts on Retr0ve&#39;s Veil Cave</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Feb 2021 20:03:14 +0800</lastBuildDate><atom:link href="http://Retr0ve.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Mar 2021 12:56:40 +0800</lastBuildDate><atom:link href="http://Retr0ve.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Factory Pattern</title>
+      <link>http://Retr0ve.github.io/posts/simple-factory-pattern/</link>
+      <pubDate>Mon, 29 Mar 2021 12:56:40 +0800</pubDate>
+      
+      <guid>http://Retr0ve.github.io/posts/simple-factory-pattern/</guid>
+      <description>设计模式 - 简单工厂模式 综述 Overall 简单来说，简单工厂模式是由一个工厂类来创建其他类的实例。根据传入工厂类参数的不同，工厂类可以生成不同类的对象（通常这些类都继承自同样的父类）。
+ 值得注意的是，简单工厂模式并不是一个成熟且规范的设计模式，因为他违背了软件设计的开闭原则（即每次增加新的产品都需要修改工厂类的逻辑判断）。
+ 实例 Example 用户去超市购物，可以选择多种支付方式，包括现金、信用卡、微信、支付宝。请按照简单工厂模式的思想设计一个程序，让超市收银方类(Client)知道用户是使用的什么支付方式，支付了多少钱。
+请画出对应的类图，并编写代码。
+类图 Class Diagram 具体代码 Code   工厂类
+public class PaymentFactory { public static Payment selectPayment(String paymentType) throws Exception { if(paymentType.equalsIgnoreCase(&amp;#34;wechat&amp;#34;)){ return new WechatPayment(); } else if (paymentType.equalsIgnoreCase(&amp;#34;alipay&amp;#34;)){ return new AlipayPayment(); } else if (paymentType.equalsIgnoreCase(&amp;#34;cash&amp;#34;)){ return new CashPayment(); } else if (paymentType.equalsIgnoreCase(&amp;#34;creditcard&amp;#34;)){ return new CreditCardPayment(); } else{ throw new Exception(&amp;#34;暂不支持该支付方式&amp;#34;); } } }   抽象支付类
+public interface Payment { public void pay(int amount); }   微信支付类</description>
+    </item>
+    
+    <item>
+      <title>Git Commit Norm</title>
+      <link>http://Retr0ve.github.io/posts/git-commit-norm/</link>
+      <pubDate>Sun, 28 Feb 2021 20:03:14 +0800</pubDate>
+      
+      <guid>http://Retr0ve.github.io/posts/git-commit-norm/</guid>
+      <description>Git 提交规范 在Git的整个流程中，commit作为一个必经之路，要求每次都必须说明这次提交的内容。但据我观察，长时间以来大部分程序员对此并不上心，经常出现不知所云的Commit message（类似：http://www.commitlogsfromlastnight.com/）。
+为了避免这种糟糕的Commit message，是时候引入一个新的规范了（并不新。
+01 作用 采用这种规范还有以下的好处：
+  通过脚本生成CHANGELOG.md
+在Angular规范中，他们使用了new features, bug fixes, breaking changes三个部分作为changlog的骨架。这一点可以作为参考。
+  在git bisect时过滤不重要的commit
+小的格式更改（加几个空格、空行，改一下缩进，加几句注释等等）可以被直接过滤掉。
+  治愈你幼小的♥
+  02 格式 Commit message包括三个部分：Header、Body和Footer。
+ &amp;lt;type&amp;gt;(&amp;lt;scope&amp;gt;): &amp;lt;subject&amp;gt;&amp;lt;BLANK LINE&amp;gt;&amp;lt;body&amp;gt;&amp;lt;BLANK LINE&amp;gt;&amp;lt;footer&amp;gt;  其中，header 是必需的，body 和 footer 可以省略。 不管是哪一个部分，任何一行都不得超过72个字符（或100个字符）。这是为了避免自动换行影响美观。
+ 特殊情况：
+如果这一次提交的内容时回滚到了之前某一次的提交，它的格式会有所不同（如下）。
+ revert：[回滚到那个版本的header]This reverts commit &amp;lt;hash&amp;gt;此处hash为被撤销 commit 的 SHA 标识符。
+ 2.1 Header Header部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。
+其中，type说明commit的类别：
+ feat：新功能（feature） fix：修补bug docs：文档（documentation） style： 格式（不影响代码运行的变动） refactor：重构（即不是新增功能，也不是修改bug的代码变动） test：增加测试 chore：构建过程或辅助工具的变动   如果type为feat和fix，则该 commit 将肯定出现在 Change log 之中。其他情况（docs、chore、style、refactor、test）由你决定，要不要放入 Change log，建议是不要。</description>
+    </item>
+    
     <item>
       <title>Hello World!</title>
       <link>http://Retr0ve.github.io/posts/new-to-hugo/</link>
@@ -24,26 +63,6 @@
    调整Source          此处也可以不调整至/docs，如果调整的话后续部署时需要将输出目录从/public改为/docs，如果不调整的话后续仅需要上传/public即可。
    至此你的GitHub Pages也配置好了。
 03 建站   输入hugo new site [你的站点名字]创建一个新的站点。</description>
-    </item>
-    
-    <item>
-      <title>数据挖掘 - 主成分分析&amp;非负矩阵分解</title>
-      <link>http://Retr0ve.github.io/posts/data-mining-pca-nmf/</link>
-      <pubDate>Sun, 28 Feb 2021 20:03:14 +0800</pubDate>
-      
-      <guid>http://Retr0ve.github.io/posts/data-mining-pca-nmf/</guid>
-      <description>1 总体作用 简单来说，主成分分析和非负矩阵分解起到对数据降维、压缩并提取特征的作用。在收集数据时，人们通常倾向于全面的收集各维度的数据。一方面更多维度的数据可以更好的描述个体，但另一方面在对对象进行分析时通常高维度不利于对数据的解读。 例如描述高考成绩时，通常会有六门考试，这六门考试的成绩能够很好的反应个体的学习状况。然而，在进行分析的时候，我们通常会将理科归类在一起称之为理综（文综同理），这就是降维的思想。
-2 主成分分析 （Principal Components Analysis） Karl Pearson ，数理统计学创立者首先提出了主成分分析的思想。
- 代数观点：变量替换，使得协方差阵对角化（变量正交） 几何观点：寻找正交坐标系，使之指向样本点散布最开的方向 作用：降低数据集维数，保持数据特征  2.1 基本原理  将原来变量（特征）重新组合成相互无关的综合变量，保留少量综合变量而尽可能多地保留信息。 数学上，将原来变量的线性组合作为新的综合变量，用方差来表达信息量。 线性组合中方差最大的作第一主成分，以此类推，直到信息保留足够多。   2.2 基本过程  数据标准化  中心化：列减均值 归一化：列除以标准差（消除尺度差异） 得到标准化后的$X$矩阵   计算协方差矩阵  矩阵$X$乘以其转置 $R=X&amp;rsquo;X$   求特征值和特征向量  求解特征方程 行列式=0 特征向量即为主成分   分解到主成分  取前q个主成分使得，阿尔法为保留的信息量（保留95%即0.95） 第i个样本在第j个主成分上的投影 在q个主成分上的投影向量（在新坐标系下的坐标） 所有样本分解 XV    2.3 应用场景  发掘样本间隐藏的联系 通过多维度描述个体，最后对个体进行评价时通过主成分分析可提现 去除样本中冗余的属性和噪声 去除贡献少的成分 数据降维从而可视化 人只适应二维和三维的图表，对于高维数据要进行可视化必须进行数据降维。 减少数据、加速机器学习过程 筛选回归变量、构造回归模型  2.</description>
-    </item>
-    
-    <item>
-      <title>数据挖掘 - 数据清洗</title>
-      <link>http://Retr0ve.github.io/posts/data-mining-1-data-cleaning/</link>
-      <pubDate>Fri, 29 Jan 2021 05:51:34 +0000</pubDate>
-      
-      <guid>http://Retr0ve.github.io/posts/data-mining-1-data-cleaning/</guid>
-      <description></description>
     </item>
     
   </channel>
