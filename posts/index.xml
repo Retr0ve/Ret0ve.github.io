@@ -6,7 +6,23 @@
     <description>Recent content in Posts on Retr0ve&#39;s Veil Cave</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Mar 2021 12:56:40 +0800</lastBuildDate><atom:link href="http://Retr0ve.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Apr 2021 12:06:24 +0800</lastBuildDate><atom:link href="http://Retr0ve.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android[1] - Wechat like interface design</title>
+      <link>http://Retr0ve.github.io/posts/android-1/</link>
+      <pubDate>Mon, 05 Apr 2021 12:06:24 +0800</pubDate>
+      
+      <guid>http://Retr0ve.github.io/posts/android-1/</guid>
+      <description>Android 类微信界面设计 设计APP门户界面，其中包含4个tab切换效果。
+01 功能分析 微信的界面非常的简单（如图所示），顶端是一个操作栏，上面有此APP的名字以及一个加号按钮，点击加号按钮后会出现一个下拉菜单展示所有可执行的快捷操作。底部是一个导航菜单，点击四个不同的按钮，屏幕中间的内容会跟随其一同变化。
+因此，我们大致的思路是：页面应该包含一个TopAppBar，一个ButtomNavigationMenu以及四个Fragment。
+为了与Android的官方风格保持一致，这里我们使用 Android Material Design 控件进行开发，最后的效果应该如下图所示。
+02 代码实现 首先，我们需要在activity_main.xml中添加TopAppBar和ButtomNavigationMenu两个控件以及中间显示内容的Fragment，并且为他们添加合适的约束条件。
+ 需要注意的是，这里的Fragment由于需要动态填充，需要使用FragmentContainerView并且不要指定fragment的name。
+ &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=&amp;#34;http://schemas.android.com/apk/res/android&amp;#34; xmlns:app=&amp;#34;http://schemas.android.com/apk/res-auto&amp;#34; xmlns:tools=&amp;#34;http://schemas.android.com/tools&amp;#34; android:layout_width=&amp;#34;match_parent&amp;#34; android:layout_height=&amp;#34;match_parent&amp;#34; android:orientation=&amp;#34;vertical&amp;#34; tools:context=&amp;#34;.MainActivity&amp;#34;&amp;gt; &amp;lt;com.google.android.material.appbar.AppBarLayout android:id=&amp;#34;@+id/appBarLayout&amp;#34; android:layout_width=&amp;#34;match_parent&amp;#34; android:layout_height=&amp;#34;wrap_content&amp;#34; app:layout_constraintEnd_toEndOf=&amp;#34;parent&amp;#34; app:layout_constraintStart_toStartOf=&amp;#34;parent&amp;#34; app:layout_constraintTop_toTopOf=&amp;#34;parent&amp;#34;&amp;gt; &amp;lt;com.google.android.material.appbar.MaterialToolbar android:id=&amp;#34;@+id/topAppBar&amp;#34; android:layout_width=&amp;#34;match_parent&amp;#34; android:layout_height=&amp;#34;wrap_content&amp;#34; style=&amp;#34;@style/Widget.MaterialComponents.Toolbar.Primary&amp;#34; app:menu=&amp;#34;@menu/top_app_bar&amp;#34; app:navigationIcon=&amp;#34;@drawable/ic_android_black_24dp&amp;#34; app:title=&amp;#34;@string/page_title&amp;#34; /&amp;gt; &amp;lt;/com.google.android.material.appbar.AppBarLayout&amp;gt; &amp;lt;androidx.fragment.app.FragmentContainerView android:id=&amp;#34;@+id/content&amp;#34; android:layout_width=&amp;#34;match_parent&amp;#34; android:layout_height=&amp;#34;0dp&amp;#34; app:layout_constraintBottom_toTopOf=&amp;#34;@+id/bottom_navigation&amp;#34; app:layout_constraintEnd_toEndOf=&amp;#34;parent&amp;#34; app:layout_constraintStart_toStartOf=&amp;#34;parent&amp;#34; app:layout_constraintTop_toBottomOf=&amp;#34;@+id/appBarLayout&amp;#34; /&amp;gt; &amp;lt;com.google.android.material.bottomnavigation.BottomNavigationView android:id=&amp;#34;@+id/bottom_navigation&amp;#34; android:layout_width=&amp;#34;match_parent&amp;#34; android:layout_height=&amp;#34;wrap_content&amp;#34; app:layout_constraintBottom_toBottomOf=&amp;#34;parent&amp;#34; app:menu=&amp;#34;@menu/bottom_navigation_menu&amp;#34; /&amp;gt; &amp;lt;/androidx.constraintlayout.widget.ConstraintLayout&amp;gt; TopAppBar 由于在activity_main.xml当中我们指定了顶部的应用栏的菜单为@menu/top_app_bar，我们需要在menu文件夹下创建一个名为top_app_bar的菜单文件。
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;menu xmlns:android=&amp;#34;http://schemas.android.com/apk/res/android&amp;#34; xmlns:app=&amp;#34;http://schemas.</description>
+    </item>
+    
     <item>
       <title>Simple Factory Pattern</title>
       <link>http://Retr0ve.github.io/posts/simple-factory-pattern/</link>
