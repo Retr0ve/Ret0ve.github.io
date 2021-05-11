@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RabbitMQ on Retr0ve&#39;s Veil Cave</title>
+    <link>http://Retr0ve.github.io/tags/rabbitmq/</link>
+    <description>Recent content in RabbitMQ on Retr0ve&#39;s Veil Cave</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Apr 2021 23:22:12 +0800</lastBuildDate><atom:link href="http://Retr0ve.github.io/tags/rabbitmq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RabbitMQ[1] - Background Knowlege</title>
+      <link>http://Retr0ve.github.io/posts/rabbitmq-1/</link>
+      <pubDate>Tue, 20 Apr 2021 23:22:12 +0800</pubDate>
+      
+      <guid>http://Retr0ve.github.io/posts/rabbitmq-1/</guid>
+      <description>RabbitMQ 01 协议 协议三要素：
+  语法。语法是用户数据与控制信息的结构与格式，以及数据出现的顺序。
+  语义。语义是解释控制信息每个部分的意义。它规定了需要发出何种控制信息以及完成的动作与做出什么样的响应。
+  时序。时序是对事件发生顺序的详细说明。
+   以Http协议举例：
+ 语法: http规定了请求报文和响应报文的格式。 语义: 客户端主动发起请求称之为请求。(这是一种定义，同时你发起的是post/get请求) 时序: 一个请求对应一个响应。(一定先有请求在有响应，这个是时序)   RabbitMQ使用了基于TCP/IP的AMQP协议。
+02 持久化 简单来说就是将数据存入磁盘，是数据能够永久保存。
+两种常见方式：文件存储、数据库。
+RabbitMQ使用的是文件存储。
+03 分发策略 消息队列中有三种角色：
+ 生产者 存储消息 消费者  类似于Git的推拉机制，生产者生产消息，MQ存储消息，消费者接收消息。
+RabbitMQ支持五种</description>
+    </item>
+    
+  </channel>
+</rss>

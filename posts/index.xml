@@ -6,9 +6,44 @@
     <description>Recent content in Posts on Retr0ve&#39;s Veil Cave</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Apr 2021 12:06:24 +0800</lastBuildDate><atom:link href="http://Retr0ve.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 May 2021 21:00:06 +0800</lastBuildDate><atom:link href="http://Retr0ve.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Android[1] - Wechat like interface design</title>
+      <title>Android[2] - Playing Music when Receiving Custom Broadcast</title>
+      <link>http://Retr0ve.github.io/posts/android-2/</link>
+      <pubDate>Tue, 11 May 2021 21:00:06 +0800</pubDate>
+      
+      <guid>http://Retr0ve.github.io/posts/android-2/</guid>
+      <description>当收到自定义广播时播放音乐 想要在收到广播的时候播放音乐，大体分为两个步骤。首先要接收到广播，然后通过服务播放音乐。
+01 广播 Android 应用与 Android 系统和其他 Android 应用之间可以相互收发广播消息，这与发布-订阅设计模式相似。这些广播会在所关注的事件发生时发送。举例来说，Android 系统会在发生各种系统事件时发送广播，例如系统启动或设备开始充电时。再比如，应用可以发送自定义广播来通知其他应用它们可能感兴趣的事件（例如，一些新数据已下载）。
+接收广播有两种方式，一种是使用静态文件注册广播接收器、另外一种是动态的注册广播接收器。此处我们将分别使用两种方法介绍如何接收系统广播和自定义广播。
+系统广播 我们将使用静态注册广播接收器的方式来接收接收短信产生的系统广播。
+  再Manifests.xml文件中声明Receiver
+&amp;lt;receiver android:name=&amp;#34;.SmsReceiver&amp;#34; android:enabled=&amp;#34;true&amp;#34; android:exported=&amp;#34;true&amp;#34;&amp;gt; &amp;lt;intent-filter&amp;gt; &amp;lt;action android:name=&amp;#34;android.provider.Telephony.SMS_RECEIVED&amp;#34;/&amp;gt; &amp;lt;/intent-filter&amp;gt; &amp;lt;/receiver&amp;gt;   创建 BroadcastReceiver 子类并实现 onReceive(Context, Intent)
+package xyz.retrove.androidcrouse2; import android.content.BroadcastReceiver; import android.content.Context; import android.content.Intent; public class SmsReceiver extends BroadcastReceiver { @Override public void onReceive(Context context, Intent intent) { Intent serviceIntent = new Intent(context, MyService.class); //在广播组件里，通过上下文对象启动音乐播放服务组件  context.startService(serviceIntent); //新建调用Activity组件的意图  Intent activityIntent = new Intent(context, MainActivity.</description>
+    </item>
+    
+    <item>
+      <title>RabbitMQ[1] - Background Knowlege</title>
+      <link>http://Retr0ve.github.io/posts/rabbitmq-1/</link>
+      <pubDate>Tue, 20 Apr 2021 23:22:12 +0800</pubDate>
+      
+      <guid>http://Retr0ve.github.io/posts/rabbitmq-1/</guid>
+      <description>RabbitMQ 01 协议 协议三要素：
+  语法。语法是用户数据与控制信息的结构与格式，以及数据出现的顺序。
+  语义。语义是解释控制信息每个部分的意义。它规定了需要发出何种控制信息以及完成的动作与做出什么样的响应。
+  时序。时序是对事件发生顺序的详细说明。
+   以Http协议举例：
+ 语法: http规定了请求报文和响应报文的格式。 语义: 客户端主动发起请求称之为请求。(这是一种定义，同时你发起的是post/get请求) 时序: 一个请求对应一个响应。(一定先有请求在有响应，这个是时序)   RabbitMQ使用了基于TCP/IP的AMQP协议。
+02 持久化 简单来说就是将数据存入磁盘，是数据能够永久保存。
+两种常见方式：文件存储、数据库。
+RabbitMQ使用的是文件存储。
+03 分发策略 消息队列中有三种角色：
+ 生产者 存储消息 消费者  类似于Git的推拉机制，生产者生产消息，MQ存储消息，消费者接收消息。
+RabbitMQ支持五种</description>
+    </item>
+    
+    <item>
+      <title>Android[1] - Wechat Like Interface Design</title>
       <link>http://Retr0ve.github.io/posts/android-1/</link>
       <pubDate>Mon, 05 Apr 2021 12:06:24 +0800</pubDate>
       
